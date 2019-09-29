@@ -1,16 +1,19 @@
 <template>
-  <el-container>
-    <el-header height="50px"><Header/></el-header>
-    <el-container class="content">
-      <el-main>
-        <router-view class="centent-mian"></router-view>
-      </el-main>
-      <el-aside width="290px">
-        <router-view class="centent-right" name="rightBar"></router-view>
-      </el-aside>
+  <div>
+    <el-container>
+      <el-header height="50px"><Header/></el-header>
+      <el-container class="content" id="content">
+        <el-main>
+          <router-view class="centent-mian"></router-view>
+        </el-main>
+        <el-aside width="290px">
+          <router-view class="centent-right" name="rightBar"></router-view>
+        </el-aside>
+      </el-container>
+      <el-footer height="auto"><Footer/></el-footer>
     </el-container>
-    <el-footer height="auto"><Footer/></el-footer>
-  </el-container>
+    <el-backtop target=".el-container" :visibility-height="0" :bottom="300"></el-backtop>
+  </div>
 </template>
 
 <script>

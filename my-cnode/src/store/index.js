@@ -24,11 +24,10 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    goTop ({ state }, target) {
-      let targetElm = document.querySelector(target || '#mainContainer')
-      if (targetElm) {
-        targetElm.scrollTop = 0
-      }
+    goTop ({ state }) {
+      document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
+      console.log('111')
     }
   },
   modules: {}

@@ -1,9 +1,10 @@
 <template>
-  <el-tabs type="card">
+  <el-tabs type="card" @tab-click="handleClick">
     <el-tab-pane
       v-for="item in tabsArray"
       :key="item.name"
       :label="item.name"
+      :name="item.tab"
     ></el-tab-pane>
   </el-tabs>
 </template>
@@ -21,6 +22,12 @@ export default {
         {name: '招聘', tab: 'job'},
         {name: '客户端测试', tab: 'test'}
       ]
+    }
+  },
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab.name, event) // tab,event是这个组件自带的
+      this.$emit('changeTab', tab) // 向父组件传递点击的页数
     }
   }
 }
