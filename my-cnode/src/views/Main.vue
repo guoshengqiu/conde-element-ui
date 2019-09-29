@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-container>
+  <div class="main" >
+    <el-container class="test">
       <el-header height="50px"><Header/></el-header>
       <el-container class="content" id="content">
         <el-main>
@@ -12,7 +12,8 @@
       </el-container>
       <el-footer height="auto"><Footer/></el-footer>
     </el-container>
-    <el-backtop target=".el-container" :visibility-height="0" :bottom="300"></el-backtop>
+    <el-backtop :visibility-height="20"></el-backtop>
+
   </div>
 </template>
 
@@ -24,6 +25,7 @@ export default {
   components: {
     Header, Footer
   }
+
 }
 </script>
 

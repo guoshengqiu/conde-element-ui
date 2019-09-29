@@ -1,12 +1,23 @@
 <template>
-  <div id="app">
+  <div id="app" @scroll="test">
     <router-view/>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  mounted () {
+    window.addEventListener('scorll', function () {
+      console.log('scroll')
+    })
+  },
+  methods: {
+    test () {
+      console.log('scroll')
+    }
+  }
 }
 </script>
 

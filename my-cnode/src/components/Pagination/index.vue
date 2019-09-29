@@ -19,6 +19,12 @@ export default {
       fristPage: this.currentPage // 使用一个变量来接收currentPage，这样这个变量改变就不会导致currentPage改变
     }
   },
+  watch: {
+    currentPage (newVal) {
+      console.log(newVal, 'page')
+      this.fristPage = newVal
+    }
+  },
   methods: {
     handleCurrentChange (val) {
       console.log('当前页:', val)

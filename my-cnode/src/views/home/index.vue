@@ -40,14 +40,14 @@ export default {
     // 封装请求Topic数据部分
     getListData () {
       this.$store.dispatch('goTop')
-      getTopic({ page: this.currentPageGet, tab: this.tab, limit: 20 }).then((res) => {
+      getTopic({ page: this.currentPage, tab: this.tab, limit: 20 }).then((res) => {
         this.list = res.data.data
         console.log('Topic数据：', this.list)
       })
     },
     // page改变后获取Topic数据
     getListDataByPage (val) {
-      this.currentPageGet = val
+      this.currentPage = val
       console.log('父组件获取的当前页数：', this.currentPageGet)
       this.getListData()
     },
