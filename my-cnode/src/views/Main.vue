@@ -12,7 +12,7 @@
       </el-container>
       <el-footer height="auto"><Footer/></el-footer>
     </el-container>
-    <el-backtop :visibility-height="20"></el-backtop>
+    <el-backtop :visibility-height="20" :bottom="200"></el-backtop>
 
   </div>
 </template>

@@ -36,5 +36,9 @@ export default {
 </script>
 
 <style>
-
+  .el-pagination {
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
 </style>
