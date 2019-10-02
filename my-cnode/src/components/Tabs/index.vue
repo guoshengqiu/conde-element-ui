@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style>
-  .el-tabs--card>.el-tabs__header {
+   .el-tabs--card>.el-tabs__header {
     border: none;
     margin: 0;
     background-color: #f6f6f6;
