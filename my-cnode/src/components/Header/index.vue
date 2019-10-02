@@ -4,16 +4,24 @@
       <router-link class="logo" :to="{path:'/'}">
         <img src="@/assets/cnode.svg" alt="cnode">
       </router-link>
-      <input class="search" @keyup.enter="search" placeholder="请输入" v-model.trim="searchText" type="text">
+      <el-input
+          v-model.trim="searchText"
+          placeholder="搜索"
+          clearable
+          class="search"
+          @keyup.enter="search"
+        >
+          <i slot="prefix" class="el-input__icon el-icon-search"></i>
+        </el-input>
     </div>
     <div class="container-rg">
       <router-link :to="{path:'/'}">首页</router-link>
       <router-link v-if="login" :to="{path: '/more'}">未读消息</router-link>
       <router-link :to="{path: '/more'}">新手入门</router-link>
-      <router-link :to="{path:'/API'}">API</router-link>
+      <router-link :to="{path:'/more'}">API</router-link>
       <router-link :to="{path: '/more'}">关于</router-link>
       <router-link v-if="!login" :to="{path: '/more'}">注册</router-link>
-      <router-link :to="{path:'/signin'}" v-if="!login">登录</router-link>
+      <router-link :to="{path:'/sign'}" v-if="!login">登录</router-link>
       <router-link v-if="login" :to="{path: '/more'}">设置</router-link>
       <a class="container-rg-api" @click="signOut()" v-if="login">退出</a>
     </div>
@@ -110,5 +118,22 @@ export default {
     //   display: inline-block;
     //   cursor: pointer;
     // }
+  }
+</style>
+
+<style>
+  .search .el-input__inner {
+    height: 20px;
+    line-height: 20px;
+    background-color: inherit;
+    border: none;
+    padding-left: 10px;
+  }
+  .search .el-input__suffix {
+    height: 20px;
+    line-height: 20px;
+  }
+  .el-input__icon {
+    line-height: 25px;
   }
 </style>

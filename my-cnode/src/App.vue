@@ -8,6 +8,9 @@
 <script>
 export default {
   name: 'App',
+  created () {
+    this.$store.commit('userInfor', JSON.parse(localStorage.getItem('accesstokenReturn')))
+  },
   mounted () {
     window.addEventListener('scorll', function () {
       console.log('scroll')

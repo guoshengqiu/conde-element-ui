@@ -3,10 +3,10 @@
     <!-- 公共 用户未登陆 -->
     <div class="item  personal-details" v-if="pl()&&!user">
       <p class="cnode">CNode：Node.js专业中文社区</p>
-      <router-link class= "github-sign" :to="{path:'/signin'}"><span>登录</span></router-link>
+      <router-link class= "github-sign" :to="{path:'/sign'}"><span>登录</span></router-link>
     </div>
     <!-- 公共 用户信息，登录后 -->
-    <!-- <User v-if="pl()&&user"/> -->
+    <User v-if="pl()&&user"/>
     <!-- 发布话题 -->
     <div class="item" v-if="publish()">发布话题</div>
     <!-- ad -->
@@ -32,10 +32,10 @@
 // 右侧栏，根据不同到路由，显示不同到模块
 import { oneOf } from '@/utils'
 import List from './config'
-// import User from '@/components/User'
+import User from '@/components/User'
 
 export default {
-  // components: { User },
+  components: { User },
   data () {
     return {
       isSignIn: false

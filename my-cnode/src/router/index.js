@@ -25,8 +25,28 @@ export default new Router({
             default: () => import('@/views/datails'),
             rightBar: () => import('@/views/rightBar')
           }
+        },
+        {
+          path: '/sign',
+          name: 'sign',
+          components: {
+            default: () => import('@/views/sign'),
+            rightBar: () => import('@/views/rightBar')
+          }
+        },
+        {
+          path: '/more',
+          name: 'more',
+          components: {
+            default: () => import('@/views/more'),
+            rightBar: () => import('@/views/rightBar')
+          }
         }
       ]
+    },
+    {
+      path: '*',
+      component: () => import('@/views/Main.vue')
     }
   ]
 })

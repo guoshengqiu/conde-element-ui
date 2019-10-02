@@ -3,5 +3,5 @@ export default {
   pl: ['home', 'API', 'datails', 'more'],
   pubList: ['home', 'API', 'datails', 'more'],
   adList: ['home', 'datails', 'more'],
-  about: ['signin']
+  about: ['sign']
 }
