@@ -59,7 +59,8 @@ export default {
   },
   // 路由到详情后，元素挂载后，滚动条回到顶点
   mounted () {
-    document.body.querySelector('#mainContainer').scrollTop = 0
+    // document.body.querySelector('#mainContainer').scrollTop = 0
+    this.$store.dispatch('goTop')
   },
   methods: {
     // 判断是否为置顶或精华博文

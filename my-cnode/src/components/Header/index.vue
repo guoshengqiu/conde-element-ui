@@ -99,6 +99,12 @@ export default {
     &:focus {
       outline: none;
     }
+    // 修改第三方样式
+    /deep/ {
+      .el-input__inner {
+        // height: 30px;
+      }
+    }
   }
   .container-rg {
     a {
