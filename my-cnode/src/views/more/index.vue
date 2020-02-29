@@ -4,7 +4,7 @@
       <div class="more-menu" :class="{hide:x}">
         <div class="more-content">我是左侧栏</div>
         <div class="more-btn" @click="x = !x" >
-            <i class="el-icon-check"></i>
+            <i :class="x?'el-icon-arrow-right':'el-icon-arrow-left'"></i>
           </div>
       </div>
     <router-link class="home" :to="{path: '/'}">返回首页</router-link>
